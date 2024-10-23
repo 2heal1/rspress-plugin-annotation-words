@@ -1,0 +1,49 @@
+{
+  "name": "rspress-plugin-annotation-words",
+  "description": "Rspress plugin for annotation of words.",
+  "author": "zhanghang <hanric.zhang@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "framework",
+    "modern",
+    "modern.js"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "version": "0.0.1",
+  "jsnext:source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "jsnext:source": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@modern-js/tsconfig": "2.60.4",
+    "@types/node": "^16",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "@rspress/shared": "1.34.1",
+    "react": "^18",
+    "rspress":"1.34.1"
+  },
+  "peerDependencies": {
+    "rspress":"^1"
+  },
+  "sideEffects": false,
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ]
+}

@@ -1,0 +1,144 @@
+:global(html) {
+  padding-right: calc(100vw - 100%);
+}
+
+.highlight {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 2px;
+  // border-bottom: 1px dashed rgb(224, 224, 224);
+  border-bottom: 1px dotted var(--rp-c-gray);
+  // &::after {
+  //   content: url(../assets/highlight.svg);
+  //   margin-left: 2px;
+  //   margin-right: 2px;
+  //   top: -4px;
+  //   position: relative;
+  // }
+}
+
+.container {
+  position: fixed;
+  z-index: 100;
+  width: 320px;
+  max-height: 500px;
+  overflow-y: scroll;
+  border-radius: 16px;
+  border: 1px solid var(--rp-c-gray-light-4);
+  background-color: var(--rp-c-bg);
+  overscroll-behavior: contain;
+  overflow-y: overlay;
+}
+
+.scrollbar {
+  scrollbar-gutter: auto;
+  // /* The size of scroll bar */
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+    transition: all 0.3s;
+  }
+
+  /* The track of scrooll bar */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* The thumb of scroll bar */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 3px solid transparent;
+    background-color: var(--rp-c-text-4);
+    background-clip: content-box;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--rp-c-bg);
+}
+
+.card-top {
+  background: url('../assets/lm-min-ultra.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 143px;
+  min-height: 63px;
+  padding: 20px 20px 10px;
+  .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--rp-c-text);
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .alias {
+    span {
+      font-size: 14px;
+      color: rgb(100, 106, 115);
+      line-height: 18px;
+    }
+    .delimeter {
+      margin: 0 3px;
+    }
+  }
+
+  :global(.dark) & {
+    background: none;
+  }
+}
+
+.cardContent {
+  padding: 0 20px 15px;
+  .description {
+    font-size: 14px;
+    color: var(--rp-c-text);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .relativeDocs,
+  .relativeLinks {
+    h4 {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--rp-c-text);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    li {
+      font-size: 14px;
+      color: var(--rp-c-text);
+      line-height: 1.5;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      div {
+        display: flex;
+        align-items: center;
+        margin-right: 3px;
+      }
+      a {
+        border-radius: 6px;
+        padding: 3px 6px;
+        // 单行截断
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all 0.2s ease-in-out;
+      }
+      a:hover {
+        background-color: rgba(51, 112, 255, 0.1);
+        color: #3370ff;
+      }
+    }
+  }
+}
