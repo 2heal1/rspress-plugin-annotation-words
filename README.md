@@ -2,6 +2,13 @@
 
 A plugin for Rsoress to support annotation words.
 
+## Examples
+[Repo](https://github.com/module-federation/core/blob/main/apps/website-new/rspress.config.ts#L75)
+
+[Docs url](https://module-federation.io/guide/troubleshooting/runtime/RUNTIME-007.html)
+
+![image](https://github.com/user-attachments/assets/5c2f7e87-6c87-473c-b02a-2000856f0105)
+
 ## Install
 
 ```bash
